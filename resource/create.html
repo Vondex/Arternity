@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Page</title>
+
+    <!-- Do not forget to change the path to the css file -->
+    <link href="./static/css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="box">
+
+        <!-- In case of error, you should display div with class "error-container" -->
+        <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+        <!--
+        <div class="error-container">
+            <p>Error</p>
+        </div>-->
+
+
+        <nav>
+            <!-- Do not forget to change the path to the image -->
+            <img src="./static/img/logo1.png" alt="logo">
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All Books</a></li>
+                <!-- Logged users -->
+                <li><a href="#">Add Book</a></li>
+                <li><a href="#">Books of {{email-of-user}}</a></li>
+                <li><a href="#">Logout</a></li>
+                <!-- Guest users -->
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+
+        </nav>
+
+        <main>
+
+            <section id="create-page">
+                <div class="createSection">
+                    <div class="info-create">
+                        <h2>Add your work and share it with others</h2>
+                    </div>
+
+                    <form action="#" method="" class="createForm">
+                        <h2>Add Post</h2>
+                        <ul class="noBullet">
+                            <li>
+                                <label for="title">Title:</label>
+                                <input type="text" class="inputFields" id="title" placeholder="The Silvered Sun" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="author">Author:</label>
+                                <input type="text" class="inputFields" id="author" placeholder="Roshani Chokshi" name="" value="" />
+                            </li> 
+                            <li>
+                                <label for="genre">Genre:</label>
+                                <input type="text" class="inputFields" id="genre" placeholder="Landscape" name="" value="" />
+                            </li> 
+                            <li>
+                                <label for="date">Added at:</label>
+                                <input type="text" class="inputFields" id="date" placeholder="20.03.2022" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="image">Image:</label>
+                                <input type="text" class="inputFields" id="image" placeholder="http:/..." name="" value="" />
+                            </li>
+                            <li>
+                                <label for="description">Description:</label>
+                                <textarea id="description" class="inputFields" name="" placeholder="A beautiful winter sunrise, ..."></textarea>
+                            </li>
+                            <li id="center-btn">
+                                <button id="create-btn">Create</button>
+                            </li>
+                        </ul>
+                    </form>
+
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer>
+            © Digital Library - LIA
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

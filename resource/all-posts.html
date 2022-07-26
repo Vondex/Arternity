@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog Page</title>
+
+    <!-- Do not forget to change the path to the css file -->
+    <link href="./static/css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="box">
+
+        <!-- In case of error, you should display div with class "error-container" -->
+        <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+        <!--
+        <div class="error-container">
+            <p>Error</p>
+        </div>-->
+
+
+
+        <nav>
+            <!-- Do not forget to change the path to the image -->
+            <img src="./static/img/eternity.png" alt="logo">
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All Posts</a></li>
+                <!-- Logged users -->
+                <li><a href="#">Add A Post</a></li>
+
+                <!-- <li><a href="#">My Posts</a></li> -->
+
+
+                <li><a href="#">{{email-of-user}}'s Profile</a></li>
+                <li><a href="#">Logout</a></li>
+                <!-- Guest users -->
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+
+        </nav>
+
+        <main>
+
+            <section id="catalog">
+                <div class="heading1">
+                    <h1>All Posts</h1>
+                    
+
+                </div>
+                <div class="band">
+
+                    <!-- If there are posts for wildlife in the database display each of them -->
+                    <div class="flip flip-vertical">
+                        <div class="front">
+                            <img src="./static/img/art1.png" alt="image_1">
+
+                        </div>
+                        <div class="back">
+                            <h2>Title</h2>
+                            <p>Description: The galaxy through a small part of the human being</p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="flip flip-vertical">
+                        <div class="front">
+                            <img src="./static/img/art3.jpg" alt="image_2">
+
+                        </div>
+                        <div class="back">
+                            <h2>Title</h2>
+                            <p>Description: The beauty of the colorful sunset.</p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="flip flip-vertical">
+                        <div class="front">
+                            <img src="./static/img/art2.jpg" alt="image_2">
+
+                        </div>
+                        <div class="back">
+                            <h2>Title</h2>
+                            <p>Description: The beauty of the colorful sunset.</p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="flip flip-vertical">
+                        <div class="front">
+                            <img src="./static/img/art4.jpg" alt="image_2">
+
+                        </div>
+                        <div class="back">
+                            <h2>Title</h2>
+                            <p>Description: The beauty of the colorful sunset.</p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- If there are still no posts for wildlife in the database display: -->
+                    <!-- <div class="no-posts">
+                        <div class="no-posts-img">
+                            <!/-- Do not forget to change the path to the image, and remove this comment  --/>
+                            <img src="./static/img/animal.jpg" alt="image_nature_3">
+                        </div>
+                        <p class="no-offer">There are no posts yet...</p>
+                    </div>-->
+                </div>
+            </section>
+        </main>
+
+
+
+        <footer>
+            &copy; ARTERNITY
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
