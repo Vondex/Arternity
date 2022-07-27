@@ -7,6 +7,7 @@
     /*yes, we have to define width and height, otherwise transformation won't work*/
     width: 130px; /* 2 x width - border-width */
     height: 70px; /* width */
+ 
   }
   
   .infinity-loader .bg div,
