@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState, Suspense } from "react";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import uniqid from 'uniqid';
 
 import * as postService from './services/postService';
@@ -19,6 +19,7 @@ import { NotFound } from './components/NotFound/NotFound';
 function App() {
 
     const [posts, setPosts] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         postService.getAll()
@@ -27,6 +28,19 @@ function App() {
                 setPosts(result);
             });
     }, []);
+
+    const addPostHandler = (postData) => {
+    setPosts(state => [
+        ...state,
+        {
+            ...postData,
+            _id: uniqid(),
+        },
+    ]);
+
+    navigate('/catalog');
+};
+
 
 
     return (
@@ -42,7 +56,7 @@ function App() {
                         </Suspense>
                     } />
 
-                    <Route path="/create" element={<CreatePost />} />
+                    <Route path="/create" element={<CreatePost addPostHandler={addPostHandler} />} />
                     <Route path="/catalog" element={<Catalog posts={posts} />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
@@ -60,7 +74,6 @@ export default App;
 
 
 
-// const navigate = useNavigate();
 
 // const addComment = (gameId, comment) => {
 //     setPosts(state => {
@@ -76,14 +89,4 @@ export default App;
 //     });
 // };
 
-// const addPostHandler = (postData) => {
-//     setPosts(state => [
-//         ...state,
-//         {
-//             ...postData,
-//             _id: uniqid(),
-//         },
-//     ]);
 
-//     navigate('/catalog');
-// };
