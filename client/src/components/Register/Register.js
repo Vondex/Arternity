@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const Register = () => {
     return (
         <section id="register-page">
@@ -16,7 +18,7 @@ export const Register = () => {
                                 id="email"
                                 name=""
                                 defaultValue=""
-                                placeholder="alex@gmail.com"
+                                placeholder="marian@gmail.com"
                             />
                         </li>
                         <li>
@@ -52,8 +54,14 @@ export const Register = () => {
                         <li id="center-btn">
                             <button id="join-btn">Join</button>
                         </li>
+                        <p className="navigation-field">
+                            <span>
+                                If you already have a profile click <Link to="/login">here</Link>
+                            </span>
+                        </p>
                     </ul>
                 </form>
+
             </div>
         </section>
 

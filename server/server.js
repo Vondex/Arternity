@@ -1336,27 +1336,27 @@
         posts: {
             "ff436770-76c5-40e2-b231-77409eda7a61": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Snow Moon",
+                "title": "Moon",
                 "author": "MariaN",
                 "date": "20.07.2022",
                 "genre": "Landscape",
-                "image": "/img/art1.png",
-                "description": "The beauty of the Moon in a winter night!",
+                "image": "/img/moon.jpg",
+                "description": "The beauty of the Moon in a simple frame!",
                 
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "The Fear",
+                "title": "Abstaction",
                 "author": "PeterVN",
                 "date": "21.07.2022",
-                "genre": "Fantasy",
+                "genre": "Concept Art",
                 "image": "/img/art2.jpg",
                 "description": "On of my best artworks so far.",
                
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "title": "Eclipse",
+                "title": "Colors of Sunset",
                 "author": "DIA",
                 "date": "22.07.2022",
                 "genre": "Landscape",

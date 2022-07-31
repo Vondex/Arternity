@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const Login = () => {
     return (
         <section id="login-page">
@@ -32,6 +34,11 @@ export const Login = () => {
                         <li id="center-btn">
                             <button id="login-btn">Login</button>
                         </li>
+                        <p className="navigation-field">
+                        <span>
+                            If you don't have a profile click <Link to="/register">here</Link>
+                        </span>
+                    </p>
                     </ul>
                 </form>
             </div>
