@@ -1,6 +1,6 @@
-const baseUrl = 'https://parseapi.back4app.com/classes';
+const baseUrl = 'http://localhost:3030';
 
 export const getAll = () => {
-    return fetch(`${baseUrl}/Post`)
+    return fetch(`${baseUrl}/data/posts`)
         .then(res => res.json())
 };

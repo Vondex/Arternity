@@ -11,21 +11,23 @@
 }
 
 .heading {
-    padding-top: 60px;
+    padding-top: 20px;
     justify-items: legacy;
     display: flex;
     height: 340px;
     flex-direction: column;
     position: relative;
     flex: 1;
-    margin-top: 15.6em;
+    margin-top: 9.6em;
     width: 100%;
     box-shadow: 0px 3px 10px #fff;
+    
     
 }
 
  .heading>h1 {
     text-transform: uppercase;
+    margin-top: 60px;
     font-size: 6.6rem;
     font-weight: 400;
     line-height: 1.1;
@@ -58,20 +60,6 @@
 } 
 
 
-
-/* #home-page {
-    display: block;
-    justify-content: space-around;
-    align-items: center;
-    bottom: 0;
-    margin-top: -5.5em;
-    margin-left: 0%;
-    margin-right: 0%;
-    min-height: 350px;
-    font-size: 20px;
-    width: 100%;
-    text-align: center;
-} */
 #box>hr {
     display: flex;
     align-items: center;
@@ -88,18 +76,7 @@
 }
 
 
-/*
-.offers {
-    font-size: 0;
-}
 
-.container {
-    display: inline;
-    width: 600px;
-    margin-left: 2em;
-    border: 26px solid #364236;
-    height: 100%;
-}*/
 
 .container>img {
     display: inline-block;
