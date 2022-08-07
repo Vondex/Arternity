@@ -44,8 +44,8 @@ This is a project created with ReactJS. </p>
 <p>:heavy_check_mark: Details Page 
 <ul>
 - Edit and Delete buttons are displayed in case the user is the owner of the post <br>
-- A logged user can also comment the posts of other users
-- The owner of the post can not comment it
+- A logged user can also comment the posts of other users <br>
+- The owner of the post can not comment it <br>
 </ul>
 
 <p>:heavy_check_mark: Logout</p>
