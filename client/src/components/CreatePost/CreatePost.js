@@ -1,15 +1,24 @@
-export const CreatePost = ({addPostHandler}) => {
-    
+import { useContext } from 'react';
+
+import { PostContext } from '../../contexts/PostContext';
+import * as postService from '../../services/postService';
+
+
+
+
+export const CreatePost = () => {
+    const { postAdd } = useContext(PostContext);
+
     const onSubmit = (e) => {
         e.preventDefault();
 
         const postData = Object.fromEntries(new FormData(e.target));
 
-        console.log(postData);
-
-        addPostHandler(postData)
+        postService.create(postData)
+            .then(result => {
+                postAdd(result)
+            });
     };
-    
     
     
     

@@ -23,16 +23,6 @@
     text-shadow: 0px 2px 5px #fff;
 }
 
-.eye {
-    background: #dad8d1;
-    border-radius: 50%;
-    display: inline-block;
-    height: 100px;
-    position: relative;
-    width: 100px;
-    box-shadow: 0px 2px 5px #fff;
-}
-
 
 .italic {
     font-style: italic;

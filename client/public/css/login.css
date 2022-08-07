@@ -20,23 +20,6 @@
     text-shadow: 0 0 4px #fff;
 
 }
-
-.signupSection {
-    background-color: #6f6e6e79;
-    background-position: 40% 60%;
-    margin: auto;
-    width: 740px;
-    height: 590px auto;
-    margin-top: 5.5em;
-    margin-bottom: 4.5em;
-    left: 35%;
-    text-align: center;
-    display: flex;
-    color: white;
-    box-shadow: 3px 8px 20px 5px rgba(226, 194, 218, 0.513);
-    text-shadow: 0 0 4px #fff;
-}
-
 .info {
     width: 250px;
     background: #3a1c2d;
@@ -50,11 +33,7 @@
     font-weight: 300;
     font-size: 23px;
 }
-.signupSection .info>h2{
-    padding-top: 9.5em;
-    font-weight: 300;
-    font-size: 23px;
-}
+
 
 .info>p {
     margin-top: 2px;
@@ -69,18 +48,6 @@
 
 }
 
-.signupForm {
-    width: 540px;
-    padding: 30px 0;
-    background: #53445073;
-    transition: .2s;
-}
-
-.signupForm>h2 {
-    font-weight: 350;
-    font-size: 27px;
-    margin-bottom: 0.8em;
-}
 
 .loginForm>h2 {
     font-weight: 350;
@@ -109,7 +76,6 @@
     padding: 0;
 }
 
-#join-btn,
 #login-btn {
     border: 1px solid #fff;
     background: #3a1c2d;
@@ -121,7 +87,6 @@
     transition: .4s;
 }
 
-#join-btn:hover,
 #login-btn:hover {
     box-shadow: 0 0 4.5px #fff;
     text-shadow: 0 0 4px #fff;

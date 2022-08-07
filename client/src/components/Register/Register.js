@@ -1,13 +1,42 @@
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import * as authService from "../../services/authService";
+import { withAuth } from "../../contexts/AuthContext";
 
-export const Register = () => {
+
+const Register = ({ auth }) => {
+
+
+    const navigate = useNavigate();
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const username = formData.get('username');
+        const email = formData.get('email');
+        const password = formData.get('password');
+        const confirmPassword = formData.get('confirm-password');
+
+        if (password !== confirmPassword) {
+            return;
+        }
+
+        authService.register(email, username, password)
+            .then(authData => {
+                auth.userLogin(authData);
+                navigate('/');
+            });
+    }
+
     return (
         <section id="register-page">
             <div className="signupSection">
                 <div className="info">
                     <h2>Discover a new art world and new people</h2>
                 </div>
-                <form action="#" method="" className="signupForm">
+                <form id="register" className="signupForm" onSubmit={onSubmit}>
                     <h2>Sign Up</h2>
                     <ul className="noBullet">
                         <li>
@@ -16,8 +45,7 @@ export const Register = () => {
                                 type="text"
                                 className="inputFields"
                                 id="email"
-                                name=""
-                                defaultValue=""
+                                name="email"
                                 placeholder="marian@gmail.com"
                             />
                         </li>
@@ -27,7 +55,7 @@ export const Register = () => {
                                 type="text"
                                 className="inputFields"
                                 id="username"
-                                name=""
+                                name="username"
                                 placeholder="MariaN"
                             />
                         </li>
@@ -36,21 +64,24 @@ export const Register = () => {
                             <input
                                 type="password"
                                 className="inputFields"
-                                id="password"
-                                name=""
+                                id="register-password"
+                                name="password"
                                 placeholder="******"
                             />
                         </li>
                         <li>
-                            <label htmlFor="location">Location:</label>
+                            <label htmlFor="confirm-password">Confirm password:</label>
                             <input
-                                type="text"
+                                type="password"
                                 className="inputFields"
-                                id="location"
-                                name=""
-                                placeholder="Berlin, Germany"
+                                id="confirm-password"
+                                name="confirm-password"
+                                placeholder="******"
+                               
                             />
                         </li>
+                       
+          
                         <li id="center-btn">
                             <button id="join-btn">Join</button>
                         </li>
@@ -67,3 +98,7 @@ export const Register = () => {
 
     )
 }
+
+const RegisterWithAuth = withAuth(Register);
+
+export default RegisterWithAuth;

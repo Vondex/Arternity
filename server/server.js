@@ -1321,11 +1321,13 @@
     var protectedData = {
         users: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
-                email: "peter@abv.bg",
+                username: "MariaN",
+                email: "marian@gmail.com",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
-                email: "john@abv.bg",
+                username: "PeterVN",
+                email: "max@gmail.com",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             }
         },
@@ -1345,13 +1347,13 @@
                 
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Abstaction",
+                "_ownerId": "35c62d93-8052-4626-8742-eeb9384bbea8",
+                "title": "Abstraction",
                 "author": "PeterVN",
                 "date": "21.07.2022",
                 "genre": "Concept Art",
                 "image": "/img/art2.jpg",
-                "description": "On of my best artworks so far.",
+                "description": "One of my best artworks so far.",
                
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
@@ -1366,6 +1368,9 @@
         },
         comments: {
         
+            // "126777f5-3277-42ad-b874-76d043b069cb": {
+            //     "text": "Beautiful!"
+            // }
         }
     };
     var rules$1 = {

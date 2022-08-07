@@ -1,10 +1,12 @@
 import { CatalogItem } from "./CatalogItem/CatalogItem"
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { PostContext } from "../../contexts/PostContext";
+
 import { Loader } from "../Loader/Loader";
 
+export const Catalog = () => {
 
-export const Catalog = ({ posts }) => {
-
+    const { posts } = useContext(PostContext);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -29,7 +31,7 @@ export const Catalog = ({ posts }) => {
                             {posts.length > 0
                                 ? posts.map(p => <CatalogItem key={p._id} post={p} />)
                                 : <div className="no-posts">
-                                    <p className="no-offer">There are no posts yet...</p>
+                                    <p>There are no posts yet...</p>
                                 </div>
                             }
 

@@ -1,7 +1,7 @@
 {
-    "name": "game-play",
+    "name": "arternity",
     "version": "1.0.0",
-    "description": "GamePlay Single Page Application",
+    "description": "Arternity Single Page Application",
     "main": "index.html",
     "scripts": {
         "test": "mocha tests",

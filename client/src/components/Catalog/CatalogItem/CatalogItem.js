@@ -8,7 +8,7 @@ export const CatalogItem = ( {post} ) => {
             </div>
             <div className="back">
                 <h2>{post.title}</h2>
-                <p>Description: {post.description}</p>
+                <p>Author: {post.author}</p>
                 <Link to={`/catalog/${post._id}`} className="details">
                     Details
                 </Link>

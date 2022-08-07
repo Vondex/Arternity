@@ -4,22 +4,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.loginSection {
-    background-color: #6f6e6e79;
-    background-position: 40% 60%;
-    margin: auto;
-    width: 820px;
-    height: 470px auto;
-    margin-top: 11em;
-    left: 35%;
-    text-align: center;
-    display: flex;
-    color: white;
-    box-shadow: 3px 10px 20px 5px rgba(226, 194, 218, 0.513);
-    text-shadow: 0 0 4px #fff;
-
-}
-
 .signupSection {
     background-color: #6f6e6e79;
     background-position: 40% 60%;
@@ -27,7 +11,7 @@
     width: 740px;
     height: 590px auto;
     margin-top: 5.5em;
-    margin-bottom: 2em;
+    margin-bottom: 4.5em;
     left: 35%;
     text-align: center;
     display: flex;
@@ -44,29 +28,18 @@
     text-shadow: 0 0 4px #fff;
 }
 
-.loginSection .info>h2 {
-    padding-top: 4.5em;
-    font-weight: 300;
-    font-size: 23px;
-}
+
 .signupSection .info>h2{
     padding-top: 9.5em;
     font-weight: 300;
     font-size: 23px;
 }
 
-.info>p {
-    margin-top: 2px;
+.info>h2 {
+    margin-top: -32px;
     font-size: 18px;
 }
 
-.loginForm {
-    width: 580px;
-    padding: 30px 0;
-    background: #53445073;
-    transition: .2s;
-
-}
 
 .signupForm {
     width: 540px;
@@ -81,11 +54,6 @@
     margin-bottom: 0.8em;
 }
 
-.loginForm>h2 {
-    font-weight: 350;
-    font-size: 27px;
-    margin-bottom: 0.8em;
-}
 
 .inputFields {
     margin: 18px 0;
@@ -108,8 +76,7 @@
     padding: 0;
 }
 
-#join-btn,
-#login-btn {
+#join-btn {
     border: 1px solid #fff;
     background: #3a1c2d;
     font-size: 18px;
@@ -120,8 +87,7 @@
     transition: .4s;
 }
 
-#join-btn:hover,
-#login-btn:hover {
+#join-btn:hover {
     box-shadow: 0 0 4.5px #fff;
     text-shadow: 0 0 4px #fff;
     background: #230817;
@@ -145,4 +111,26 @@ label {
 
 label:nth-of-type(2) {
     margin-top: 3em;
+}
+.navigation-field {
+    margin-top: 30px;
+    text-decoration: none;
+    text-shadow: none;
+}
+.navigation-field>span {
+    font-size: 12px;
+    color: rgb(221, 217, 217);
+    text-decoration: none;
+    text-shadow: none;
+}
+.navigation-field>span>a {
+    text-decoration: none;
+    margin-top: 30px;
+    color: rgb(221, 217, 217);
+    font-weight: bolder;
+    font-size: 14px;
+   
+}
+.navigation-field>span>a:hover{
+    text-shadow: 0 0 4px #fff;
 }

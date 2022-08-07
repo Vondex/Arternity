@@ -1,10 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Shadows+Into+Light&display=swap');
 
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
 } 
-
-.createSection,
 .editSection {
     background-color: #6f6e6e79; 
     background-repeat: no-repeat;
@@ -26,28 +24,26 @@ textarea {
     resize: none;
 }
 
-.createForm,
 .editForm {
+    font-size: 24px;
     width: 720px;
     padding: 10px 0;
     /* background: rgba(20, 40, 40, .8); */
     transition: .2s;
 }
 
-.createForm>h2,
 .editForm>h2 {
     font-weight: 350;
-    font-size: 27px;
+    font-size: 30px;
     margin-bottom: 1em;
     margin-top: 0.5em;
 }
 
-#create-btn,
 #edit-btn {
 
     border: 1px solid #fff;
     background: #3a1c2d;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     margin-top: 20px;
     padding: 10px 43px;
@@ -55,21 +51,20 @@ textarea {
     transition: .4s;
 }
 
-#create-btn:hover,
 #edit-btn:hover {
     box-shadow: 0 0 4.5px #fff;
     text-shadow: 0 0 4px #fff;
     background: #230817;
     padding: 10px 80px;
 }
-.info-create {
+.info-edit {
     width: 250px;
     background: #3a1c2d;
     padding: 55px 5px;
     border-right: 5px solid #3a1c2d;
     text-shadow: 0 0 4px #fff;
 }
-.info-create>h2 {
+.info-edit>h2 {
 
     margin-top: 280px;
     font-weight: lighter;
