@@ -31,6 +31,7 @@ This is a project created with ReactJS. </p>
 <h3>Guest View</h3>
 <p>:heavy_check_mark: Home Page</p>
 <p>:heavy_check_mark: All Posts</p>
+<p>:heavy_check_mark: Details Page (can't comment a post)</p>
 <p>:heavy_check_mark: Login Page</p>
 <p>:heavy_check_mark: Register Page</p>
 
@@ -43,7 +44,8 @@ This is a project created with ReactJS. </p>
 <p>:heavy_check_mark: Details Page 
 <ul>
 - Edit and Delete buttons are displayed in case the user is the owner of the post <br>
-- A logged user can also comment the posts of other users.
+- A logged user can also comment the posts of other users
+- The owner of the post can not comment it
 </ul>
 
 <p>:heavy_check_mark: Logout</p>
