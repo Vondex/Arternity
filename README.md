@@ -52,6 +52,15 @@ This is a project created with ReactJS. </p>
 
 <br>
 
+<h2>Starting the app locally</h2>
+
+Open a terminal and type `cd server` <br>
+Then `node server.js`<br>
+<br>
+Open another terminal and type `cd client` <br>
+Then `npm start` <br>
+<br>
+<h3>And you are ready to go!</h3>
 
 
 
