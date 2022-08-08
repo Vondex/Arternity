@@ -134,3 +134,11 @@ label:nth-of-type(2) {
 .navigation-field>span>a:hover{
     text-shadow: 0 0 4px #fff;
 }
+
+.error {
+    color: rgb(244, 35, 35);
+    text-shadow: none;
+    font-size: 18px;
+    font-weight: bold;
+
+}

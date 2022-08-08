@@ -2,15 +2,38 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import * as authService from "../../services/authService";
 import { withAuth } from "../../contexts/AuthContext";
-
+import { useState } from 'react';
+import registerValidation from './registerValidation';
 
 const Register = ({ auth }) => {
 
+    const [values, setValues] = useState({
+        email: "",
+        username: "",
+        password: "",
+    });
 
-    const navigate = useNavigate();
+    const [errors, setErrors] = useState({});
 
-    const onSubmit = (e) => {
+    const handleChange = (e) => {
         e.preventDefault();
+        setValues({
+            ...values,
+            [e.target.name]: e.target.value,
+        });
+    }
+
+    // const handleFormSubmit = (e) => {
+    //     e.preventDefault();
+    // }
+    
+    
+    const navigate = useNavigate();
+    
+    const onSubmit = (e) => {
+        
+        e.preventDefault();
+        setErrors(registerValidation(values));
 
         const formData = new FormData(e.target);
 
@@ -47,7 +70,10 @@ const Register = ({ auth }) => {
                                 id="email"
                                 name="email"
                                 placeholder="marian@gmail.com"
+                                value = {values.email}
+                                onChange={handleChange}
                             />
+                            {errors.email && <p className="error">{errors.email}</p>}
                         </li>
                         <li>
                             <label htmlFor="username">Username:</label>
@@ -57,7 +83,10 @@ const Register = ({ auth }) => {
                                 id="username"
                                 name="username"
                                 placeholder="MariaN"
+                                value = {values.username}
+                                onChange={handleChange}
                             />
+                              {errors.username && <p className="error">{errors.username}</p>}
                         </li>
                         <li>
                             <label htmlFor="password">Password:</label>
@@ -67,7 +96,10 @@ const Register = ({ auth }) => {
                                 id="register-password"
                                 name="password"
                                 placeholder="******"
+                                value = {values.password}
+                                onChange={handleChange}
                             />
+                              {errors.password && <p className="error">{errors.password}</p>}
                         </li>
                         <li>
                             <label htmlFor="confirm-password">Confirm password:</label>
@@ -77,11 +109,11 @@ const Register = ({ auth }) => {
                                 id="confirm-password"
                                 name="confirm-password"
                                 placeholder="******"
-                               
+
                             />
                         </li>
-                       
-          
+
+
                         <li id="center-btn">
                             <button id="join-btn">Join</button>
                         </li>

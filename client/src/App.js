@@ -1,8 +1,6 @@
 import './App.css';
 import { Suspense, lazy } from "react";
 import { Routes, Route } from 'react-router-dom';
-
-
 import { AuthProvider } from './contexts/AuthContext';
 import { PostProvider } from './contexts/PostContext';
 import PrivateRoute from "./components/common/PrivateRoute";

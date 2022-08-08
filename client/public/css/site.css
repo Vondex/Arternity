@@ -103,8 +103,6 @@ nav a:hover {
     display: inline;
 }
 
-
-
 footer {
     
     position: absolute;
@@ -116,41 +114,5 @@ footer {
     color: white;
     padding: 0.7em 1em;
     
-}
-
-.error-container {
-    position: fixed;
-    right: 5em;
-    min-width: 80px;
-    display: block;
-    z-index: 11111;
-    top: 13%;
-    text-align: center;
-    border-radius: 0.5rem;
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    height: auto;
-    width: 530px;
-    box-shadow: 0px 0px 20px #BC243C;
-    padding: 1em;
-}
-
-.error-container>p {
-    background: #BC243C;
-    font-size: 26px;
-    padding: 20px;
-    height: auto;
-}
-
-.error-container {
-    -moz-animation: cssAnimation 0s ease-in 2s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 2s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 2s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 2s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
 }
 

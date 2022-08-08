@@ -11,7 +11,7 @@ export const Header = () => {
 
 
             <ul className="menu">
-                <li><Link to="/">Home</Link></li>
+                <li id="home-link"><Link to="/">Home</Link></li>
                 <li><Link to="/catalog">All Posts</Link></li>
 
 
