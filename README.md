@@ -31,6 +31,7 @@ This is a project created with ReactJS. </p>
 <h3>Guest View</h3>
 <p>:heavy_check_mark: Home Page</p>
 <p>:heavy_check_mark: All Posts</p>
+<p>:heavy_check_mark: Details Page (can't comment a post)</p>
 <p>:heavy_check_mark: Login Page</p>
 <p>:heavy_check_mark: Register Page</p>
 
@@ -43,13 +44,23 @@ This is a project created with ReactJS. </p>
 <p>:heavy_check_mark: Details Page 
 <ul>
 - Edit and Delete buttons are displayed in case the user is the owner of the post <br>
-- A logged user can also comment the posts of other users.
+- A logged user can also comment the posts of other users <br>
+- The owner of the post can not comment it <br>
 </ul>
 
 <p>:heavy_check_mark: Logout</p>
 
 <br>
 
+<h2>Starting the app locally</h2>
+
+Open a terminal and type `cd server` <br>
+Then `node server.js`<br>
+<br>
+Open another terminal and type `cd client` <br>
+Then `npm start` <br>
+<br>
+<h3>And you are ready to go!</h3>
 
 
 
