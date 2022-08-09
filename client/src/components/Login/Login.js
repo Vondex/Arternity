@@ -1,12 +1,28 @@
 import { Link } from 'react-router-dom';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../contexts/AuthContext";
 import * as authService from "../../services/authService";
+import loginRegValidation from '../validation/loginRegValidation';
 
 export const Login = () => {
     const { userLogin } = useContext(AuthContext);
+    const [values, setValues] = useState({
+        email: "",
+        password: "",
+    });
+
+    const [errors, setErrors] = useState({});
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setValues({
+            ...values,
+            [e.target.name]: e.target.value,
+        });
+    }
+
     const navigate = useNavigate();
 
     const onSubmit = (e) => {
@@ -17,20 +33,23 @@ export const Login = () => {
             password,
         } = Object.fromEntries(new FormData(e.target));
 
-        authService.login(email, password)
-            .then(authData => {
-                userLogin(authData);
-                navigate('/');
-            })
-            .catch(() => {
-                navigate('/404');
-            });
+        setErrors(loginRegValidation(values));
+        if (email == '' || password == '') {
+            return;
+        } else {
+
+            authService.login(email, password)
+                .then(authData => {
+                    userLogin(authData);
+                    navigate('/');
+                });
+        }
     };
 
 
 
     return (
-        
+
         <section id="login-page">
             <div className="loginSection">
                 <div className="info">
@@ -48,7 +67,10 @@ export const Login = () => {
                                 id="email"
                                 name="email"
                                 placeholder="marian@gmail.com"
+                                value={values.email}
+                                onChange={handleChange}
                             />
+                            {errors.email && <p className="error">{errors.email}</p>}
                         </li>
                         <li>
                             <label htmlFor="password">Password:</label>
@@ -58,16 +80,19 @@ export const Login = () => {
                                 id="password"
                                 name="password"
                                 placeholder="*********"
+                                value={values.password}
+                                onChange={handleChange}
                             />
+                            {errors.password && <p className="error">{errors.password}</p>}
                         </li>
                         <li id="center-btn">
                             <button id="login-btn">Login</button>
                         </li>
                         <p className="navigation-field">
-                        <span>
-                            If you don't have a profile click <Link to="/register">here</Link>
-                        </span>
-                    </p>
+                            <span>
+                                If you don't have a profile click <Link to="/register">here</Link>
+                            </span>
+                        </p>
                     </ul>
                 </form>
             </div>

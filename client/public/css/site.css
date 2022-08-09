@@ -102,6 +102,14 @@ nav a:hover {
 #guest {
     display: inline;
 }
+.error {
+    color: rgb(244, 35, 35);
+    text-shadow: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -9px;
+
+}
 
 footer {
     

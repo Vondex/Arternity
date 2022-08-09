@@ -7,7 +7,7 @@ export const PostContext = createContext();
 
 const postReducer = (state, action) => {
     switch (action.type) {
-         case 'ADD_POSTS':
+        case 'ADD_POSTS':
             return action.payload.map(x => ({ ...x, comments: [] }));
         case 'ADD_POST':
             return [...state, action.payload];

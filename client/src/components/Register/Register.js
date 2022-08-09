@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as authService from "../../services/authService";
 import { withAuth } from "../../contexts/AuthContext";
 import { useState } from 'react';
-import registerValidation from './registerValidation';
+import loginRegValidation from '../validation/loginRegValidation';
 
 const Register = ({ auth }) => {
 
@@ -11,6 +11,7 @@ const Register = ({ auth }) => {
         email: "",
         username: "",
         password: "",
+        confirm: ""
     });
 
     const [errors, setErrors] = useState({});
@@ -23,34 +24,31 @@ const Register = ({ auth }) => {
         });
     }
 
-    // const handleFormSubmit = (e) => {
-    //     e.preventDefault();
-    // }
-    
-    
     const navigate = useNavigate();
-    
+
     const onSubmit = (e) => {
-        
+
         e.preventDefault();
-        setErrors(registerValidation(values));
-
+        
         const formData = new FormData(e.target);
-
+        
         const username = formData.get('username');
         const email = formData.get('email');
         const password = formData.get('password');
-        const confirmPassword = formData.get('confirm-password');
-
-        if (password !== confirmPassword) {
+        const confirmPassword = formData.get('confirm');
+        
+        setErrors(loginRegValidation(values));
+        if (email == '' || username == '' || password == '' || password != confirmPassword) {
             return;
-        }
+        } else {
 
-        authService.register(email, username, password)
+            authService.register(email, username, password)
             .then(authData => {
                 auth.userLogin(authData);
                 navigate('/');
             });
+        }
+        
     }
 
     return (
@@ -70,7 +68,7 @@ const Register = ({ auth }) => {
                                 id="email"
                                 name="email"
                                 placeholder="marian@gmail.com"
-                                value = {values.email}
+                                value={values.email}
                                 onChange={handleChange}
                             />
                             {errors.email && <p className="error">{errors.email}</p>}
@@ -83,10 +81,10 @@ const Register = ({ auth }) => {
                                 id="username"
                                 name="username"
                                 placeholder="MariaN"
-                                value = {values.username}
+                                value={values.username}
                                 onChange={handleChange}
                             />
-                              {errors.username && <p className="error">{errors.username}</p>}
+                            {errors.username && <p className="error">{errors.username}</p>}
                         </li>
                         <li>
                             <label htmlFor="password">Password:</label>
@@ -96,21 +94,24 @@ const Register = ({ auth }) => {
                                 id="register-password"
                                 name="password"
                                 placeholder="******"
-                                value = {values.password}
+                                value={values.password}
                                 onChange={handleChange}
                             />
-                              {errors.password && <p className="error">{errors.password}</p>}
+                            {errors.password && <p className="error">{errors.password}</p>}
                         </li>
                         <li>
-                            <label htmlFor="confirm-password">Confirm password:</label>
+                            <label htmlFor="confirm">Confirm password:</label>
                             <input
                                 type="password"
                                 className="inputFields"
-                                id="confirm-password"
-                                name="confirm-password"
+                                id="confirm"
+                                name="confirm"
                                 placeholder="******"
+                                value={values.confirm}
+                                onChange={handleChange}
 
                             />
+                            {errors.confirm && <p className="error">{errors.confirm}</p>}
                         </li>
 
 

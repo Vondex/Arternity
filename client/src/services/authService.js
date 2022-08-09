@@ -2,7 +2,7 @@ import * as request from "./requester";
 
 const baseUrl = 'http://localhost:3030/users';
 
-export const login = (email, password) => 
+export const login = (email, password) =>
     request.post(`${baseUrl}/login`, { email, password });
 
 
@@ -21,4 +21,6 @@ export const logout = async (accessToken) => {
 };
 
 export const register = (email, username, password) =>
-    request.post(`${baseUrl}/register`, {email, username, password});
+    request.post(`${baseUrl}/register`, { email, username, password });
+
+

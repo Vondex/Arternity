@@ -10,7 +10,7 @@
     background-position: 100% 5%;
     margin: auto;
     width: 680px;
-    height: 850px;
+    height: 950px;
     margin-top: 4.5rem;
     margin-bottom: 3rem;
     left: 35%;
@@ -29,8 +29,6 @@ textarea {
     font-size: 24px;
     width: 720px;
     padding: 10px 0;
-    /* background: rgba(20, 40, 40, .8); */
-    transition: .2s;
 }
 
 .createForm>h2 {
@@ -49,7 +47,6 @@ textarea {
     margin-top: 20px;
     padding: 10px 43px;
     cursor: pointer;
-    transition: .4s;
 }
 
 #create-btn:hover {

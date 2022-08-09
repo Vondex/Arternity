@@ -28,14 +28,13 @@ export const AuthProvider = ({
     );
 };
 
-// Custom Hook
 export const useAuthContext = () => {
     const context = useContext(AuthContext);
 
     return context;
 };
 
-// With HOC
+
 export const withAuth = (Component) => {
     const AuthWrapper = (props) => {
         const context = useContext(AuthContext);
