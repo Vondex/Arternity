@@ -9,7 +9,7 @@ This is a project created with ReactJS. </p>
 
 <br>
 <h2>Note: The app is still in development</h2>
-<p>Adding data validaton, guards and "Search" or "My Profile" pages.</p>
+<p>Adding "Search" page.</p>
 
 <br>
 
