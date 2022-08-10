@@ -26,6 +26,10 @@ export const Catalog = () => {
                         <div className="heading-all-posts">
                             <h1>All Posts</h1>
                         </div>
+                        <div className="search">
+                            <h2>Search a post</h2>
+                            <input type="text" placeholder="Search" />
+                        </div>
                         <div className="band-all">
 
                             {posts.length > 0

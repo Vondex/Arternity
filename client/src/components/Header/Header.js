@@ -20,7 +20,7 @@ export const Header = () => {
                     ? <div id="user">
 
                         <li><Link to="/create">Create Post</Link></li>
-                        <li><Link to="/profile">{user.username}'s posts</Link></li>
+                        {/* <li><Link to="/profile">{user.username}'s posts</Link></li> */}
                         <li><Link to="/logout">Logout</Link></li>
                     </div>
 

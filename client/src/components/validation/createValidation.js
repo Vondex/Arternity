@@ -1,4 +1,4 @@
-const createEditValidation = (values) => {
+const createValidation = (values) => {
     const URL_PATTERN = /^https?:\/\/(.+)/;
     let errors = {};
     if (!values.title) {
@@ -29,4 +29,4 @@ const createEditValidation = (values) => {
     return errors;
 }
 
-export default createEditValidation;
+export default createValidation;

@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import { PostContext } from '../../contexts/PostContext';
 import * as postService from '../../services/postService';
 
-import createEditValidation from '../validation/createEditValidation';
+import createValidation from '../validation/createValidation';
 
 
 export const CreatePost = () => {
@@ -49,7 +49,7 @@ export const CreatePost = () => {
             image,
             description
         }
-        setErrors(createEditValidation(values));
+        setErrors(createValidation(values));
         if (title == '' || author == '' || genre == '' || date == '' || image == '' || description == '') {
             return;
         } else {
