@@ -8,10 +8,6 @@ The more you work and post, the more you get noticed by the others.
 This is a project created with ReactJS. </p>
 
 <br>
-<h2>Note: The app is still in development</h2>
-<p>Adding "Search" page.</p>
-
-<br>
 
 <h2>Back-End</h2>
 
