@@ -5,7 +5,7 @@
 <p>Arternity is a place where people can share their work and find a new inspiration. 
 It's shaped with the goal of empowering artists and creating opportunities for success. 
 The more you work and post, the more you get noticed by the others. 
-This is a project created with ReactJS. </p>
+This is a simple project created with ReactJS. </p>
 
 <br>
 
