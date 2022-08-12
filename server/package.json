@@ -1,7 +1,7 @@
 {
     "name": "arternity",
     "version": "1.0.0",
-    "description": "Arternity Single Page Application",
+    "description": "Arternity ReactJS SPA",
     "main": "index.html",
     "scripts": {
         "test": "mocha tests",

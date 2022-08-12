@@ -8,7 +8,6 @@ import createValidation from '../validation/createValidation';
 
 export const CreatePost = () => {
     const { postAdd } = useContext(PostContext);
-
     const [values, setValues] = useState({
         title: "",
         author: "",
@@ -57,7 +56,7 @@ export const CreatePost = () => {
             postService.create(data)
             .then(result => {
                 postAdd(result)
-            });
+            })
         }
         
     };
@@ -151,7 +150,6 @@ export const CreatePost = () => {
                                 className="inputFields"
                                 name="description"
                                 placeholder="A beautiful winter sunrise, ..."
-                                defaultValue={""} 
                                 value={values.description}
                                 onChange={handleChange}
                             />

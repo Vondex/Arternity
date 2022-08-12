@@ -45,8 +45,6 @@
 
 .card_book {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -117,6 +115,5 @@ span {
 .disc {
     font-size: 18px;
 }
-
 
 

@@ -50,7 +50,6 @@
     display: flex;
     align-items: center;
     max-width: 950px;
-    /* background: #6f6e6e79; */
     box-shadow: 0px 3px 10px #fff;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -87,4 +86,26 @@
 #submit-btn:hover {
     text-shadow: 0px 3px 10px #fff;
     box-shadow: 0px 3px 10px #fff;
+}
+
+.no-comments {
+    color: #fff;
+    height: 200px auto;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    max-width: 950px;
+    background: #6f6e6e79;
+    box-shadow: 0px 3px 10px #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    font-size: 14px;
+}
+.error {
+    color: rgb(244, 35, 35);
+    text-shadow: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -9px;
 }

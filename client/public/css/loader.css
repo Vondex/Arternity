@@ -1,57 +1,56 @@
 
 .infinity-loader {
-    position: fixed; /*We have to use it as we are using absolute positioning on its children and we will align it in the center of the page*/
+    position: fixed; 
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /*yes, we have to define width and height, otherwise transformation won't work*/
-    width: 130px; /* 2 x width - border-width */
-    height: 70px; /* width */
+    width: 130px; 
+    height: 70px; 
   }
   
   .infinity-loader .bg div,
   .infinity-loader > .fg > div > div {
-    width: 70px; /* width */
-    height: 70px; /* width */
-    border: 10px solid #aaa; /* border-width solid #aaa */
-    box-sizing: border-box; /* so that its border won't increase its width*/
-    border-radius: 50%; /* to make the div round*/
+    width: 70px; 
+    height: 70px; 
+    border: 10px solid #aaa; 
+    box-sizing: border-box; 
+    border-radius: 50%; 
     position: absolute;
   }
   
   .infinity-loader .right-bg {
     transform: translate(100%, 0);
-    left: -10px; /* -border-width */
+    left: -10px; 
   }
   
   .infinity-loader > .fg > div > div {
     border-color: rgb(235, 14, 205) rgb(143, 20, 214) transparent transparent;
     transform: rotate(135deg);
-    animation: spin 1s linear infinite; /* spin time linear infinite */
-    position: static; /*add this otherwise transformation in its parent won't work as expect*/
+    animation: spin 1s linear infinite; 
+    position: static; 
   }
   
   .infinity-loader > .fg > div {
-    clip: rect(0, 70px, 35px, 0); /* 0, width, width/2, 0*/
-    position: absolute; /* required for using clip: rect() */
+    clip: rect(0, 70px, 35px, 0); 
+    position: absolute; 
   }
   
   .infinity-loader > .fg > .bottom-right-rect {
-    left: -10px; /* -border-width */
+    left: -10px; 
     transform: translateX(100%) scale(1, -1);
   }
   
   .infinity-loader > .fg > .bottom-right-rect > div {
-    animation-delay: 0.25s; /* time/4 */
+    animation-delay: 0.25s; 
   }
   
   .infinity-loader > .fg > .top-right-rect {
-    left: -10px; /* -border-width */
+    left: -10px; 
     transform: translateX(100%) scale(-1, 1);
   }
   
   .infinity-loader > .fg > .top-right-rect > div {
-    animation-delay: 0.5s; /* (2 x time)/4 */
+    animation-delay: 0.5s; 
   }
   
   .infinity-loader > .fg > .bottom-left-rect {
@@ -59,7 +58,7 @@
   }
   
   .infinity-loader > .fg > .bottom-left-rect > div {
-    animation-delay: 0.75s; /* (3 x time)/4 */
+    animation-delay: 0.75s; 
   }
   
   .infinity-loader > .fg {
@@ -70,6 +69,6 @@
     50%,
     100% {
       transform: rotate(495deg);
-    } /* (360 + 135)deg*/
+    } 
   }
   

@@ -5,6 +5,7 @@ import { withAuth } from "../../contexts/AuthContext";
 import { useState } from 'react';
 import loginRegValidation from '../validation/loginRegValidation';
 
+
 const Register = ({ auth }) => {
 
     const [values, setValues] = useState({

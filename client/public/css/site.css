@@ -102,6 +102,11 @@ nav a:hover {
 #guest {
     display: inline;
 }
+.menu > span {
+
+    font-size: 21px;
+    margin-right: 640px;
+}
 .error {
     color: rgb(244, 35, 35);
     text-shadow: none;
@@ -110,6 +115,27 @@ nav a:hover {
     margin-bottom: -9px;
 
 }
+/* .searchbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+    
+}
+.search>input {
+    width: 700px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #6f6e6e5a;
+
+}
+.search>h2 {
+    
+    font-size: 20px;
+    color: #fff;
+    
+} */
 
 footer {
     

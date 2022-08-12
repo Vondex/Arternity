@@ -5,15 +5,20 @@ import { useAuthContext } from '../../contexts/AuthContext';
 
 import * as postService from '../../services/postService';
 import * as commentService from '../../services/commentService';
+import commentValidation from '../validation/commentValidation';
+
 
 
 export const PostDetails = () => {
 
     const navigate = useNavigate();
-    const [textAreaContent, setTextAreaContent] = useState('');
+    const [textAreaContent, setTextAreaContent] = useState({
+        comment: "",
+    });
     const { addComment, fetchPostDetails, selectPost, postRemove } = useContext(PostContext);
     const { user } = useAuthContext();
     const { postId } = useParams();
+    const [errors, setErrors] = useState({});
 
     const currentPost = selectPost(postId);
 
@@ -22,12 +27,22 @@ export const PostDetails = () => {
     useEffect(() => {
         (async () => {
             const postDetails = await postService.getOne(postId);
-            console.log(postDetails);
             const postComments = await commentService.getByPostId(postId);
 
             fetchPostDetails(postId, { ...postDetails, comments: postComments.map(x => `${x.user.username}: ${x.text}`) });
         })();
-    }, [postId])
+    }, []);
+
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setTextAreaContent({
+            ...textAreaContent,
+            [e.target.name]: e.target.value,
+        });
+    }
+
+
 
     const addCommentHandler = (e) => {
         e.preventDefault();
@@ -35,12 +50,21 @@ export const PostDetails = () => {
 
         const comment = formData.get('comment');
 
-        commentService.create(postId, comment)
-            .then(result => {
-                addComment(postId, comment);
-            });
-        setTextAreaContent('');
+
+        setErrors(commentValidation(textAreaContent));
+        if (comment == '') {
+
+            return;
+        } else {
+            commentService.create(postId, comment)
+                .then(result => {
+                    addComment(postId, comment);
+                });
+                setTextAreaContent('');
+                
+        }
     };
+
 
     const postDeleteHandler = () => {
         const confirmation = window.confirm('Are you sure you want to delete this post?');
@@ -111,12 +135,12 @@ export const PostDetails = () => {
                                             <div className="text-area">
 
                                                 <textarea
-                                                    onChange={e => setTextAreaContent(e.target.value)}
-                                                    value={textAreaContent}
+                                                    onChange={handleChange}
+                                                    value={textAreaContent.comment ? textAreaContent.comment : ''}
                                                     name="comment"
                                                     placeholder="Comment......"
                                                 />
-
+                                                {errors.comment && <p className="error">{errors.comment}</p>}
 
                                             </div>
                                             <button id="submit-btn">Submit</button>
@@ -155,7 +179,10 @@ export const PostDetails = () => {
                     )}
 
                     {!currentPost.comments &&
-                        <h1>No comments yet</h1>
+                        <div className='no-comments'>
+                            <h1>No comments yet</h1>
+
+                        </div>
                     }
 
                 </article>

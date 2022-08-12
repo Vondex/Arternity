@@ -36,14 +36,17 @@ export const Login = () => {
         setErrors(loginRegValidation(values));
         if (email == '' || password == '') {
             return;
-        } else {
-
-            authService.login(email, password)
-                .then(authData => {
-                    userLogin(authData);
-                    navigate('/');
-                });
         }
+
+        authService.login(email, password)
+            .then(authData => {
+                userLogin(authData);
+                navigate('/');
+            })
+            .catch(() => {
+                return;
+            })
+
     };
 
 

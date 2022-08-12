@@ -11,6 +11,7 @@ export const Header = () => {
 
 
             <ul className="menu">
+                {user.username && <span>{user.username}'s profile</span>}
                 <li id="home-link"><Link to="/">Home</Link></li>
                 <li><Link to="/catalog">All Posts</Link></li>
 
@@ -20,7 +21,6 @@ export const Header = () => {
                     ? <div id="user">
 
                         <li><Link to="/create">Create Post</Link></li>
-                        {/* <li><Link to="/profile">{user.username}'s posts</Link></li> */}
                         <li><Link to="/logout">Logout</Link></li>
                     </div>
 

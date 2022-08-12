@@ -8,7 +8,8 @@ export const PostContext = createContext();
 const postReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_POSTS':
-            return action.payload.map(x => ({ ...x, comments: [] }));
+            // return action.payload.map(x => ({ ...x, comments: [] }));
+            return [...action.payload];
         case 'ADD_POST':
             return [...state, action.payload];
         case 'FETCH_POST_DETAILS':
@@ -40,6 +41,7 @@ export const PostProvider = ({
                 dispatch(action);
             });
     }, []);
+
 
     const selectPost = (postId) => {
         return posts.find(x => x._id === postId) || {};
@@ -93,7 +95,7 @@ export const PostProvider = ({
             addComment,
             fetchPostDetails,
             selectPost,
-            postRemove
+            postRemove,
         }}>
             {children}
         </PostContext.Provider>

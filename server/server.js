@@ -1326,7 +1326,7 @@
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
-                username: "PeterVN",
+                username: "MaxArt",
                 email: "max@gmail.com",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             }
@@ -1349,7 +1349,7 @@
             "1840a313-225c-416a-817a-9954d4609f7c": {
                 "_ownerId": "35c62d93-8052-4626-8742-eeb9384bbea8",
                 "title": "Abstraction",
-                "author": "PeterVN",
+                "author": "MaxArt",
                 "date": "21.07.2022",
                 "genre": "Concept Art",
                 "image": "/img/art2.jpg",
@@ -1364,6 +1364,34 @@
                 "genre": "Landscape",
                 "image": "/img/art3.jpg",
                 "description": "Created with PhotoShop and ClipStudio",
+                
+            },
+            "29fa2586-28f1-484c-9cb0-0d33b173131b": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "title": "Dreamy Night",
+                "author": "DIA",
+                "date": "28.07.2022",
+                "genre": "Fantasy",
+                "image": "/img/art6.jpg",
+                "description": "Just dreaming. Hope u like it!",
+            },
+            "764g2586-28f1-484c-9cb0-097jhgr3131b": {
+                "_ownerId": "35c62d93-8052-4626-8742-eeb9384bbea8",
+                "title": "Steampunk city",
+                "author": "MaxArt",
+                "date": "29.07.2022",
+                "genre": "Fantasy",
+                "image": "/img/art7.jpg",
+                "description": "Artwork concept art fantasy art, architecture",
+            },
+            "94657586-28f1-484c-9cb0-097jhgr3131b": {
+                "_ownerId": "35c62d93-8052-4626-8742-eeb9384bbea8",
+                "title": "Castle city",
+                "author": "MaxArt",
+                "date": "10.08.2022",
+                "genre": "Fantasy",
+                "image": "/img/art8.jpg",
+                "description": "City concept art fantasy art, architecture",
             }
         },
         comments: {
