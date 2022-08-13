@@ -44,7 +44,7 @@ export const Login = () => {
                 navigate('/');
             })
             .catch(() => {
-                return;
+                navigate('*');
             })
 
     };

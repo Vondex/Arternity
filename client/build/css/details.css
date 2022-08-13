@@ -1,0 +1,119 @@
+
+
+
+#details-page {
+    margin-top: 7.5em;
+    left: 50%;
+}
+
+.main_card {
+    color: #fff;
+    height: 500px auto;
+    margin: 50px auto;
+    display: flex;
+    left: 55%;
+    max-width: 950px;
+    background: #6f6e6e79;
+    box-shadow: 0px 3px 10px #fff;
+}
+
+.card_left {
+    width: 570px;
+
+}
+
+.card_datails {
+    font-size: 20px;
+    width: 96%;
+    padding: 50px;
+    margin-top: -25px;
+}
+
+.card_datails h1 {
+    font-size: 29px;
+    padding-bottom: 8px;
+    margin-left: -7px;
+}
+
+.card_right img {
+    height: 100%;
+    width: 420px;
+    border-radius: 2px;
+}
+
+
+
+.card_book {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 27px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+
+}
+
+
+.card-author,
+.card-date,
+.card-reader {
+    color: rgb(223, 210, 210);
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+
+
+
+.social{
+    margin-left: -10px;
+    margin-top: 2em;
+    
+}
+
+.social>
+.edit-btn,
+.del-btn {
+    color: #fff;
+    border: none;
+    padding: 14px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    background-color: #3a1c2d;
+    cursor: pointer;
+}
+
+
+.edit-btn:hover,
+.del-btn:hover{
+    text-shadow: 0px 3px 10px #fff;
+    box-shadow: 0px 3px 10px #fff;
+}
+
+
+p {
+    flex: 1;
+    line-height: 1.4;
+}
+
+span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 2em 0 0 0;
+}
+
+
+.disc {
+    font-size: 18px;
+}
+
+

@@ -1,0 +1,74 @@
+
+.infinity-loader {
+    position: fixed; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px; 
+    height: 70px; 
+  }
+  
+  .infinity-loader .bg div,
+  .infinity-loader > .fg > div > div {
+    width: 70px; 
+    height: 70px; 
+    border: 10px solid #aaa; 
+    box-sizing: border-box; 
+    border-radius: 50%; 
+    position: absolute;
+  }
+  
+  .infinity-loader .right-bg {
+    transform: translate(100%, 0);
+    left: -10px; 
+  }
+  
+  .infinity-loader > .fg > div > div {
+    border-color: rgb(235, 14, 205) rgb(143, 20, 214) transparent transparent;
+    transform: rotate(135deg);
+    animation: spin 1s linear infinite; 
+    position: static; 
+  }
+  
+  .infinity-loader > .fg > div {
+    clip: rect(0, 70px, 35px, 0); 
+    position: absolute; 
+  }
+  
+  .infinity-loader > .fg > .bottom-right-rect {
+    left: -10px; 
+    transform: translateX(100%) scale(1, -1);
+  }
+  
+  .infinity-loader > .fg > .bottom-right-rect > div {
+    animation-delay: 0.25s; 
+  }
+  
+  .infinity-loader > .fg > .top-right-rect {
+    left: -10px; 
+    transform: translateX(100%) scale(-1, 1);
+  }
+  
+  .infinity-loader > .fg > .top-right-rect > div {
+    animation-delay: 0.5s; 
+  }
+  
+  .infinity-loader > .fg > .bottom-left-rect {
+    transform: scale(-1);
+  }
+  
+  .infinity-loader > .fg > .bottom-left-rect > div {
+    animation-delay: 0.75s; 
+  }
+  
+  .infinity-loader > .fg {
+    filter: drop-shadow(0 0 6px rgb(119, 43, 166));
+  }
+  
+  @keyframes spin {
+    50%,
+    100% {
+      transform: rotate(495deg);
+    } 
+  }
+  

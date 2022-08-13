@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Shadows+Into+Light&display=swap');
+
+* {
+    font-family: 'Rajdhani', sans-serif;
+} 
+
+.createSection {
+    background-color: #6f6e6e79; 
+    background-repeat: no-repeat;
+    background-position: 100% 5%;
+    margin: auto;
+    width: 680px;
+    height: 950px;
+    margin-top: 4.5rem;
+    margin-bottom: 3rem;
+    left: 35%;
+    text-align: center;
+    display: flex;
+    color: white;
+    box-shadow: 3px 10px 20px 5px rgba(226, 194, 218, 0.513);
+    text-shadow: 0 0 4px #fff;
+}
+
+textarea {
+    resize: none;
+}
+
+.createForm {
+    font-size: 24px;
+    width: 720px;
+    padding: 10px 0;
+}
+
+.createForm>h2 {
+    font-weight: 350;
+    font-size: 30px;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
+
+#create-btn {
+
+    border: 1px solid #fff;
+    background: #3a1c2d;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 43px;
+    cursor: pointer;
+}
+
+#create-btn:hover {
+    box-shadow: 0 0 4.5px #fff;
+    text-shadow: 0 0 4px #fff;
+    background: #230817;
+    padding: 10px 80px;
+}
+.info-create {
+    width: 250px;
+    background: #3a1c2d;
+    padding: 55px 5px;
+    border-right: 5px solid #3a1c2d;
+    text-shadow: 0 0 4px #fff;
+}
+.info-create>h2 {
+
+    margin-top: 280px;
+    font-weight: lighter;
+}
